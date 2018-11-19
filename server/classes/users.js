@@ -22,14 +22,13 @@ class Users {
     }
 
     getPersonsByRoom(room) {
-        let personOnRoom = this.persons.filter(per => per.room === room);
+        let personOnRoom = this.persons.filter(per => per.room === room)[0];
         return personOnRoom;
     }
 
     removePerson(id) {
-
         let personRemove = this.getPersonById(id);
-        this.persons = this.persons.filter(per => per.id !== id);
+        this.persons = this.persons.filter(per => per.id !== id)[0];
         return personRemove;
     }
 }
